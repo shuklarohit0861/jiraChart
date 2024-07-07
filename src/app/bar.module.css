@@ -1,0 +1,62 @@
+.bar_container {
+    display: flex;
+    position: relative;
+    height: 500px;
+    width: 80%;
+}
+
+.bar {
+    border: 2px solid black;
+    height: 100%;
+    width: 100%;
+    border-top: 0;
+    border-right: 0;
+    display: flex;
+    gap: 10px;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    position: relative;
+}
+
+
+
+.y_axis {
+    position: absolute;
+    top: 50%;
+    transform: translate(-57%, 50%) rotate(90deg);
+}
+
+.x_axis {
+    position: absolute;
+    transform: translateY(23px);
+    bottom: 0;
+    right: 50%;
+}
+
+.bar_item {
+    width: 100%;
+    position: relative;
+}
+
+.tooltip {
+    color: white;
+    position: absolute;
+    background-color: black;
+    padding: 4px;
+    border-radius: 4px;
+    text-align: center;
+    z-index: 20;
+    transform: translate(50%, -127%);
+    top: 0;
+    right: 50%;
+    width: max-content;
+    display: block;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+
+
+.bar_item:hover .tooltip {
+    opacity: 1;
+}
